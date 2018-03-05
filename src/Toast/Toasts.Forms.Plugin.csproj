@@ -7,10 +7,6 @@
     <PackageId>Plugin.Toasts.Forms</PackageId>
     
     <Product>$(AssemblyName) ($(TargetFramework))</Product>
-    <AssemblyVersion>3.3.2</AssemblyVersion>
-    <AssemblyFileVersion>3.3.2</AssemblyFileVersion>
-    <Version>3.3.2</Version>
-    <PackageVersion>3.3.2</PackageVersion>
     <PackOnBuild>false</PackOnBuild>
     <NeutralLanguage>en</NeutralLanguage>
     <LangVersion>default</LangVersion>
