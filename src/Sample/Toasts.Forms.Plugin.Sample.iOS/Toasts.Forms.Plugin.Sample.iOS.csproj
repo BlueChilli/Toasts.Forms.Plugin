@@ -116,10 +116,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Toasts.Forms.Plugin\Toasts.Forms.Plugin.csproj">
-      <Project>{e1df45c8-e7a9-4240-adfc-a3a094cf3b00}</Project>
-      <Name>Toasts.Forms.Plugin</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Toasts.Forms.Plugin.Sample\Toasts.Forms.Plugin.Sample.csproj">
       <Name>Toasts.Forms.Plugin.Sample</Name>
       <Project>{553A881C-278B-4A3C-9C79-606EDEEE3270}</Project>
