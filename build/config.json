@@ -1,0 +1,12 @@
+{
+	"productName" : "Plugin.Toast",
+	"projectName" : "Plugin.Toast",
+	"githubOwner": "EgorBo",
+	"githubRepository": "Toasts.Forms.Plugin",
+	"packageWhiteList": ["Toasts.Forms.Plugin"],
+	"solutionFile" : "../src/Toasts.Forms.Plugin.Build.sln",
+	 "testProjectPath": "",	
+     "runUnitTests" : false,
+	"nuspecRootPath" : "../src/",
+	"artifactDirectory" : "../build/artifacts/"
+}
