@@ -1,9 +1,9 @@
 {
-	"productName" : "Plugin.Toast",
-	"projectName" : "Plugin.Toast",
+	"productName" : "Toasts.Forms.Plugin",
+	"projectName" : "Toasts.Forms.Plugin",
 	"githubOwner": "EgorBo",
 	"githubRepository": "Toasts.Forms.Plugin",
-	"packageWhiteList": ["Plugin.Toasts.Forms"],
+	"packageWhiteList": ["Toasts.Forms.Plugin"],
 	"solutionFile" : "../src/Toasts.Forms.Plugin.Build.sln",
 	 "testProjectPath": "",	
      "runUnitTests" : false,

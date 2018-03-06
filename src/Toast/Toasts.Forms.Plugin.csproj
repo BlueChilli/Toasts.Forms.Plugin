@@ -4,7 +4,7 @@
     <TargetFrameworks>netstandard1.1;netstandard2.0;MonoAndroid43;Xamarin.iOS10;<!--uap10.0.15063;--></TargetFrameworks>
     <AssemblyName>Plugin.Toasts</AssemblyName>
     <RootNamespace>Plugin.Toasts</RootNamespace>
-    <PackageId>Plugin.Toasts.Forms</PackageId>
+    <PackageId>Toasts.Forms.Plugin</PackageId>
     
     <Product>$(AssemblyName) ($(TargetFramework))</Product>
     <PackOnBuild>false</PackOnBuild>
