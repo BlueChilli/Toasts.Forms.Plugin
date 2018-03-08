@@ -9,6 +9,6 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Toasts.Forms.Plugin\Toasts.Forms.Plugin.csproj" />
+    <ProjectReference Include="..\..\Toast\Toasts.Forms.Plugin.csproj" />
   </ItemGroup>
 </Project>

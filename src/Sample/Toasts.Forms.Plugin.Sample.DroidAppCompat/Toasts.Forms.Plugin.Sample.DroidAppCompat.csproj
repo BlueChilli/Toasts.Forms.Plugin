@@ -157,6 +157,10 @@
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Toast\Toasts.Forms.Plugin.csproj">
+      <Project>{1beacebf-e385-43a2-9879-88a332a14c20}</Project>
+      <Name>Toasts.Forms.Plugin</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Toasts.Forms.Plugin.Sample\Toasts.Forms.Plugin.Sample.csproj">
       <Project>{553a881c-278b-4a3c-9c79-606edeee3270}</Project>
       <Name>Toasts.Forms.Plugin.Sample</Name>

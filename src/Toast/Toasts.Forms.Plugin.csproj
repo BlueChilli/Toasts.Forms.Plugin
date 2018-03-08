@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="MSBuild.Sdk.Extras/1.2.2">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.1;netstandard2.0;MonoAndroid43;Xamarin.iOS10;<!--uap10.0.15063;--></TargetFrameworks>
+    <TargetFrameworks>netstandard1.1;netstandard2.0;monoandroid43;monoandroid8.1;xamarin.ios10;<!--uap10.0.15063;--></TargetFrameworks>
     <AssemblyName>Plugin.Toasts</AssemblyName>
     <RootNamespace>Plugin.Toasts</RootNamespace>
     <PackageId>Toasts.Forms.Plugin</PackageId>
@@ -40,8 +40,8 @@
     <Copyright>Copyright 2018</Copyright>
   </PropertyGroup>
 
-   <PropertyGroup Condition="'$(TargetFramework)' == 'MonoAndroid43'">
-    <TargetFrameworkIdentifier>MonoAndroid</TargetFrameworkIdentifier>
+   <PropertyGroup Condition="'$(TargetFramework)' == 'monoandroid43'">
+    <!-- <TargetFrameworkIdentifier>MonoAndroid</TargetFrameworkIdentifier> -->
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
@@ -55,7 +55,6 @@
   
  
   <ItemGroup>
-    <PackageReference Include="MSBuild.Sdk.Extras" Version="1.2.2" PrivateAssets="All" />
     <Compile Include="Shared\**\*.cs" />
   </ItemGroup>
 
@@ -71,15 +70,21 @@
     <Compile Include="Platforms\UWP\**\*.cs" />
   </ItemGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' != 'MonoAndroid43' ">
+  <ItemGroup Condition=" '$(TargetFramework)' != 'monoandroid43' Or '$(TargetFramework)' != 'monoandroid8.1'">
     <Compile Remove="Resources\**" />
     <None Include="Resources\**" />
   </ItemGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'MonoAndroid43' ">
-    <Compile Include="Resources\**\*.cs" />
+   <ItemGroup Condition=" '$(TargetFramework)' == 'monoandroid43'">
     <AndroidResource Include="Resources\**\*.xml" />
+  </ItemGroup>
+
+<ItemGroup Condition=" '$(TargetFramework)' == 'monoandroid43' Or  '$(TargetFramework)' == 'monoandroid8.1'">
+    <Compile Include="Resources\**\*.cs" />
     <Compile Include="Platforms\Android\**\*.cs" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'monoandroid43'">
     <PackageReference Include="Xamarin.Android.Support.Animated.Vector.Drawable">
       <Version>23.3.0</Version>
     </PackageReference>
@@ -100,7 +105,29 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'Xamarin.iOS10' ">
+  <ItemGroup Condition="'$(TargetFramework)' == 'monoandroid8.1'">
+    <PackageReference Include="Xamarin.Android.Support.Animated.Vector.Drawable">
+      <Version>25.4.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Design">
+      <Version>25.4.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v4">
+      <Version>25.4.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat">
+      <Version>25.4.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v7.RecyclerView">
+      <Version>25.4.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Vector.Drawable">
+      <Version>25.4.0.2</Version>
+    </PackageReference>
+  </ItemGroup>
+
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'xamarin.ios10' ">
     <Compile Include="Platforms\iOS\**\*.cs" />
     <BundleResource Include="Platforms\iOS\Resources\**\*.png" />
   </ItemGroup>
@@ -138,8 +165,4 @@
     <Compile Include="Platforms\DotNet\**\*.cs" />
   </ItemGroup>
   -->
-
-
-
-  <Import Project="$(MSBuildSDKExtrasTargets)" Condition="Exists('$(MSBuildSDKExtrasTargets)')" />
 </Project>
