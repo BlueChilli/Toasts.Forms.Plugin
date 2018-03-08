@@ -40,8 +40,9 @@
     <Copyright>Copyright 2018</Copyright>
   </PropertyGroup>
 
-   <PropertyGroup Condition="'$(TargetFramework)' == 'monoandroid43'">
-    <!-- <TargetFrameworkIdentifier>MonoAndroid</TargetFrameworkIdentifier> -->
+   <PropertyGroup Condition="'$(TargetFramework)' == 'monoandroid43' Or '$(TargetFramework)' == 'monoandroid8.1'">
+    <TargetFrameworkIdentifier>MonoAndroid</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
@@ -75,11 +76,9 @@
     <None Include="Resources\**" />
   </ItemGroup>
 
-   <ItemGroup Condition=" '$(TargetFramework)' == 'monoandroid43'">
-    <AndroidResource Include="Resources\**\*.xml" />
-  </ItemGroup>
 
-<ItemGroup Condition=" '$(TargetFramework)' == 'monoandroid43' Or  '$(TargetFramework)' == 'monoandroid8.1'">
+ <ItemGroup Condition=" '$(TargetFramework)' == 'monoandroid43' Or '$(TargetFramework)' == 'monoandroid8.1'">
+    <AndroidResource Include="Resources\**\*.xml" />
     <Compile Include="Resources\**\*.cs" />
     <Compile Include="Platforms\Android\**\*.cs" />
   </ItemGroup>
